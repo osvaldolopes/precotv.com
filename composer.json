@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
+            "App\\": "/mnt/e1daaebf-f475-4d80-a50d-28f7478d3641/PROJETOS/precotv.com/app",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
