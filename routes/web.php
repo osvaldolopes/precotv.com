@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +14,16 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Route::verb('uri', Controller::method)->name('route-name');
 
-Route::get('/', [UserController::class, 'listPrecos']);
+
+//HOME
+Route::get('/', [HomeController::class, 'home'])->name('home');
+
+//LOGIN
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/password', [UserController::class, 'password'])->name('password');
+Route::get('/register', [UserController::class, 'register'])->name('register');
+
+//PRODUCT
+Route::get('/dashboard', [ProductController::class, 'dashboard'])->name('dashboard');

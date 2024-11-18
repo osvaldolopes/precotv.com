@@ -6,8 +6,18 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function listPrecos()
-    {
-        echo "<h1>Lista de Preços</h1>";
+    public function login()
+    {        
+        return view('admin.login');
+    }
+
+    public function password()
+    {        
+        return view('admin.password');
+    }
+
+    public function register()
+    {        
+        return view('admin.register');
     }
 }
