@@ -10,4 +10,8 @@ class ProductController extends Controller
     {
         return view('admin.dashboard');
     }
+    public function tables()
+    {
+        return view('admin.tables');
+    }
 }

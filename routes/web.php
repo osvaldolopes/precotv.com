@@ -14,6 +14,7 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 //Route::verb('uri', Controller::method)->name('route-name');
 
 
@@ -27,3 +28,5 @@ Route::get('/register', [UserController::class, 'register'])->name('register');
 
 //PRODUCT
 Route::get('/dashboard', [ProductController::class, 'dashboard'])->name('dashboard');
+Route::get('/tables', [ProductController::class, 'tables'])->name('tables');
+
