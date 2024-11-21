@@ -46,25 +46,25 @@
             </div>
             <div class="row">
                 <!-- GRAFICOS
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        Area Chart Example
+                                <div class="col-xl-6">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-chart-area me-1"></i>
+                                            Area Chart Example
+                                        </div>
+                                        <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                     </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                 </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        Bar Chart Example
+                                <div class="col-xl-6">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-chart-bar me-1"></i>
+                                            Bar Chart Example
+                                        </div>
+                                        <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
-                            </div>
-                            -->
+                                -->
                 <div class="container">
                     <div class="card mb-4">
                         <div class="card-header">
@@ -99,7 +99,7 @@
                                         <td>2011/04/25</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
                                             </div>
                                         </td>
                                     </tr>
@@ -110,7 +110,8 @@
                                         <td>2011/04/25</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                                                    checked>
                                             </div>
                                         </td>
                                     </tr>
@@ -187,7 +188,8 @@
                                         <td>2011/04/25</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                                                    checked>
                                             </div>
                                         </td>
                                     </tr>
@@ -211,7 +213,7 @@
                                         <td>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault">
+                                                    id="flexSwitchCheckDefault" checked>
                                             </div>
                                         </td>
                                     </tr>
@@ -223,7 +225,7 @@
                                         <td>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault">
+                                                    id="flexSwitchCheckDefault" checked>
                                             </div>
                                         </td>
                                     </tr>
@@ -283,7 +285,7 @@
                                         <td>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault">
+                                                    id="flexSwitchCheckDefault" checked>
                                             </div>
                                         </td>
                                     </tr>

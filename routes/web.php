@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductController;
 */
 
 //Route::verb('uri', Controller::method)->name('route-name');
-
+//O QUE E DIGITADO NA URI    CLASSE CONTROLE     NOME DA ROTA   
 
 //HOME
 Route::get('/', [HomeController::class, 'home'])->name('home');

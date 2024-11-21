@@ -21,7 +21,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                         <a class="small" href="password">Esqueceu a Senha?</a>
-                        <a class="btn btn-primary" href="index.html">Login</a>
+                        <a class="btn btn-primary" href="dashboard">Login</a>
                     </div>
                 </form>
             </div>
