@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer('proreg_id')->default(0);
             $table->string('proreg_description', 100);
-            $table-decimal('proreg_price')->default(0.00);
-            $table-decimal('proreg_promo')->default(0.00);
+            $table->decimal('proreg_price')->default(0.00);
+            $table->decimal('proreg_promo')->default(0.00);
             $table->timestamps();
         });
     }
