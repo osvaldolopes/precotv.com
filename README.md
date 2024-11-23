@@ -26,7 +26,7 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 ## DOCUMENTAÇÃO
 
-O sistema está implementado com o laravel 10, para mais informações consulte a ->, [documentação do Laravel](https://laravel.com/docs/10.x).
+O sistema está implementado com o laravel 10, para mais informações consulte a -> [documentação do Laravel](https://laravel.com/docs/10.x).
 
 ## SOBRE O SISTEMA
 
