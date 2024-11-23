@@ -9,11 +9,11 @@
 
 ## INICIAR O PROJETO
 
-git clone https://github.com/osvaldolopes/precotv.com.git
-composer install
-Duplicar o arquivo .env.example para um arquivo .env
-php artisan key:generate
-php artisan migrate
+<p>git clone https://github.com/osvaldolopes/precotv.com.git</p>
+<p>composer install</p>
+<p>Duplicar o arquivo .env.example para um arquivo .env</p>
+<p>php artisan key:generate</p>
+<p>php artisan migrate</p>
 
 ## Learning Laravel
 
