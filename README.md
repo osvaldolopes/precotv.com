@@ -9,52 +9,29 @@
 
 ## INICIAR O PROJETO
 
-<p>git clone https://github.com/osvaldolopes/precotv.com.git</p>
-<p>composer install</p>
-<p>Duplicar o arquivo .env.example para um arquivo .env</p>
-<p>php artisan key:generate</p>
-<p>php artisan migrate</p>
+git clone https://github.com/osvaldolopes/precotv.com.git</b>
+composer install</b>
+Duplicar o arquivo .env.example para um arquivo .env</b>
+php artisan key:generate</b>
+php artisan migrate</b>
 
-## Learning Laravel
+## APRENDENDO LARAVEL
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+O Laravel tem a mais extensa e completa [documentação](https://laravel.com/docs) e biblioteca de tutoriais em vídeo de todos os frameworks de aplicativos web modernos, facilitando muito o início do uso do framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Você também pode experimentar o [Laravel Bootcamp](https://bootcamp.laravel.com), onde você será guiado pela construção de um aplicativo Laravel moderno do zero.
 
+Se você não quiser ler, o [Laracasts](https://laracasts.com) pode ajudar. O Laracasts contém milhares de tutoriais em vídeo sobre uma variedade de tópicos, incluindo Laravel, PHP moderno, testes unitários e JavaScript. Aumente suas habilidades explorando nossa abrangente biblioteca de vídeos.
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## DOCUMENTAÇÃO
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+O sistema está implementado com o laravel 10, para mais informações consulte a ->, [documentação do Laravel](https://laravel.com/docs/10.x).
 
-### Premium Partners
+## SOBRE O SISTEMA
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Sistema de exibição de tabelas de preços em monitores e televisões para Lanchonetes, Padarias, Supermercados etc, conta com um painel de controle para atualizar informações e modificar detalhes da pagina de exibição.
 
-## Contributing
+## AUTOR
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Osvaldo Filho [Curriculo online](https://osvaldofilho.netlify.app/).
