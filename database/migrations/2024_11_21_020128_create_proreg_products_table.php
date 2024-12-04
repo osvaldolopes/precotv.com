@@ -5,20 +5,21 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
-{
+{     
+    protected $connection = 'mysql_oracle';   
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::connection('mysql_oracle')->create('proreg_products', function (Blueprint $table) {
-            $table->id();
-            $table->integer('proreg_id')->default(0);
-            $table->string('proreg_description', 100);
-            $table->decimal('proreg_price')->default(0.00);
-            $table->decimal('proreg_promo')->default(0.00);
-            $table->timestamps();
-        });
+        // Schema::connection('mysql_oracle')->create('proreg_products', function (Blueprint $table) {
+        //    $table->id();
+        //    $table->integer('proreg_id')->default(0);
+        //    $table->string('proreg_description', 100);
+        //    $table->decimal('proreg_price')->default(0.00);
+        //    $table->decimal('proreg_promo')->default(0.00);
+        //    $table->timestamps();
+        // });
     }
 
     /**
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('proreg_products');
+        //Schema::connection('mysql_oracle')->dropIfExists('proreg_products');
     }
 };

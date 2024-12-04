@@ -17,12 +17,12 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +33,6 @@
             </nav>
         </div>
     </header>
-
     <main class="main">
         <div class="table-main">
             <table class="table">
@@ -42,61 +41,25 @@
                     <td>DESCRIÇÃO</td>
                     <td>PREÇO</td>
                 </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>
-                <tr>
-                    <td>32500</td>
-                    <td class="table-descricao">ALCATRA KG C/ MAMINHA</td>
-                    <td class="table-preco">R$ 45,60</td>
-                </tr>                
+                @forelse ($products as $product)
+                    @if ($product->prod_checked == 'checked')
+                        <tr>
+                            <td>{{ $product->prod_id }}</td>
+                            <td class="table-descricao">{{ $product->prod_description }}</td>
+                            <td class="table-preco">R$
+                                @if ($product->prod_promo > 0)
+                                    {{ $product->prod_promo }}
+                                @else
+                                    {{ $product->prod_price }}
+                                @endif
+                            </td>
+                        </tr>
+                    @endif
+                @empty
+                    <tr>
+                        <td>Tabela Vazia</td>
+                    </tr>
+                @endforelse
             </table>
         </div>
         <!-- Hero Section -->
@@ -146,9 +109,9 @@
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
     <div id="preloader"></div>
-    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

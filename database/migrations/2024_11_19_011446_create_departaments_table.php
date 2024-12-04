@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('departaments', function (Blueprint $table) {
             $table->id();
-            $table->integer('dep_department')->default(0);
+            $table->bigInteger('departament_id');
             $table->string('dep_description', 120);
+            $table->string('img_url')->nullable();
             $table->timestamps();
         });
     }

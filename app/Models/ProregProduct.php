@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class ProregProduct extends Model
 {
     use HasFactory;
 
+    protected $connection = "mysql_oracle";
+
     protected $fillable = [
-        'prd_id',
-        'department_id',
-        'prod_description',
-        'prod_price',
-        'prod_promo',
-        'prod_checked',
+        'proreg_id',
+        'proreg_description',
+        'proreg_price',
+        'proreg_promo',
     ];
 }
