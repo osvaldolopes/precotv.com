@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function home()
     {     
-        $products = Product::all();
+        $products = Product::paginate(80);
         return view('home', [
             'products' => $products
         ]);

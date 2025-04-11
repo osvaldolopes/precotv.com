@@ -11,7 +11,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>   
+
+    <!-- ICONES DA CLASS FA FA -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -23,6 +26,10 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,31 +43,44 @@
     <main class="main">
         <div class="table-main">
             <table class="table">
-                <tr class="table-top">
-                    <td>CODIGO</td>
-                    <td>DESCRIÇÃO</td>
-                    <td>PREÇO</td>
-                </tr>
-                @forelse ($products as $product)
-                    @if ($product->prod_checked == 'checked')
-                        <tr>
-                            <td>{{ $product->prod_id }}</td>
-                            <td class="table-descricao">{{ $product->prod_description }}</td>
-                            <td class="table-preco">R$
-                                @if ($product->prod_promo > 0)
-                                    {{ $product->prod_promo }}
-                                @else
-                                    {{ $product->prod_price }}
-                                @endif
-                            </td>
-                        </tr>
-                    @endif
-                @empty
-                    <tr>
-                        <td>Tabela Vazia</td>
+                <thead>
+                    <tr class="table-top">
+                        <td>CODIGO</td>
+                        <td>DESCRIÇÃO</td>
+                        <td>PREÇO</td>
                     </tr>
-                @endforelse
+                </thead>
             </table>
+
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <table class="table">
+                            <tbody>
+                                @forelse ($products as $product)
+                                    @if ($product->prod_checked == 'checked')
+                                        <tr>
+                                            <td>{{ $product->prod_id }}</td>
+                                            <td class="table-descricao">{{ $product->prod_description }}</td>
+                                            <td class="table-preco">
+                                                @if ($product->prod_promo > 0)
+                                                    <i class="fas fa-arrow-alt-circle-down"></i> R$ {{ $product->prod_promo }}
+                                                @else
+                                                    <i class="px-3"></i> R$ {{ $product->prod_price }}
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endif
+                                @empty
+                                    <tr>
+                                        <td>Tabela Vazia</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Hero Section -->
         <section class="hero section dark-background">

@@ -19,19 +19,19 @@ class DepartamentSeeder extends Seeder
         if (!Departament::where('departament_id', '37')->first()){
             Departament::create([
                 'departament_id' => '37',
-                'dep_description' => 'PADARIA',                
+                'dep_description' => 'Padaria',                
             ]);
         }
         if (!Departament::where('departament_id', '38')->first()){
             Departament::create([
                 'departament_id' => '38',
-                'dep_description' => 'AÇOUGUE',                
+                'dep_description' => 'Açougue',                
             ]);
         }
         if (!Departament::where('departament_id', '39')->first()){
             Departament::create([
                 'departament_id' => '39',
-                'dep_description' => 'FRIOS',                
+                'dep_description' => 'Frios',                
             ]);
         }
     }
