@@ -11,7 +11,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>   
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 
     <!-- ICONES DA CLASS FA FA -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -27,9 +27,11 @@
     <!-- Main CSS File -->
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
 
-   
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -42,35 +44,31 @@
     </header>
     <main class="main">
         <div class="table-main">
-            <table class="table">
-                <thead>
-                    <tr class="table-top">
-                        <td>CODIGO</td>
-                        <td>DESCRIÇÃO</td>
-                        <td>PREÇO</td>
-                    </tr>
-                </thead>
-            </table>
-
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <table class="table">
+                            <thead>
+                                <tr class="table-top">
+                                    <td>CODIGO</td>
+                                    <td>DESCRIÇÃO</td>
+                                    <td>PREÇO</td>
+                                </tr>
+                            </thead>
                             <tbody>
                                 @forelse ($products as $product)
-                                    @if ($product->prod_checked == 'checked')
-                                        <tr>
-                                            <td>{{ $product->prod_id }}</td>
-                                            <td class="table-descricao">{{ $product->prod_description }}</td>
-                                            <td class="table-preco">
-                                                @if ($product->prod_promo > 0)
-                                                    <i class="fas fa-arrow-alt-circle-down"></i> R$ {{ $product->prod_promo }}
-                                                @else
-                                                    <i class="px-3"></i> R$ {{ $product->prod_price }}
-                                                @endif
-                                            </td>
-                                        </tr>
-                                    @endif
+                                    <tr>
+                                        <td>{{ $product->prod_id }}</td>
+                                        <td>{{ $product->prod_description }}</td>
+                                        <td class="table-preco">
+                                            @if ($product->prod_promo > 0)
+                                                <i class="fas fa-arrow-alt-circle-down"></i> R$
+                                                {{ $product->prod_promo }}
+                                            @else
+                                                <i class="px-3"></i> R$ {{ $product->prod_price }}
+                                            @endif
+                                        </td>
+                                    </tr>
                                 @empty
                                     <tr>
                                         <td>Tabela Vazia</td>
@@ -78,17 +76,16 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        {{ $products->links() }}
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Hero Section -->
         <section class="hero section dark-background">
             <img src="assets/img/produtos de padaria.png" alt="">
             <div class="container">
-
-
-
                 <div class="col-xl-4">
 
                     <h1 data-aos="fade-up">Padaria</h1>
