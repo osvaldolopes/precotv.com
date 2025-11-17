@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MercadorController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProregController;
@@ -30,7 +31,8 @@ Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register', [UserController::class, 'registered'])->name('register.registered');
 
 //PRODUCT
-Route::get('/dashboard', [ProductController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard', [MercadorController::class, 'dashboard'])->name('dashboard');
+//Route::get('/dashboard', [ProductController::class, 'dashboard'])->name('dashboard');
 Route::get('/tables', [ProductController::class, 'tables'])->name('tables');
 Route::get('/integration', [ProregController::class, 'proregproduct'])->name('integration');
 

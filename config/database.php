@@ -33,6 +33,30 @@ return [
     |
     */
 
+
+//     'connections' => [
+//     // conexão padrão
+//     'mysql' => [
+//         // ...
+//     ],
+
+//     // nova conexão chamada 'retag'
+//     'retag' => [
+//         'driver' => 'mysql',
+//         'host' => env('DB_RETAG_HOST', '127.0.0.1'),
+//         'port' => env('DB_RETAG_PORT', '3306'),
+//         'database' => env('DB_RETAG_DATABASE', 'retag'),
+//         'username' => env('DB_RETAG_USERNAME', 'root'),
+//         'password' => env('DB_RETAG_PASSWORD', ''),
+//         'charset' => 'utf8mb4',
+//         'collation' => 'utf8mb4_unicode_ci',
+//         'prefix' => '',
+//         'strict' => true,
+//         'engine' => null,
+//     ],
+// ],
+
+
     'connections' => [
 
         'sqlite' => [

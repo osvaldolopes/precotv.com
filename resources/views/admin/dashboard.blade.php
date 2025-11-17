@@ -46,25 +46,25 @@
             </div>
             <div class="row">
                 <!-- GRAFICOS
-                                    <div class="col-xl-6">
-                                        <div class="card mb-4">
-                                            <div class="card-header">
-                                                <i class="fas fa-chart-area me-1"></i>
-                                                Area Chart Example
+                                        <div class="col-xl-6">
+                                            <div class="card mb-4">
+                                                <div class="card-header">
+                                                    <i class="fas fa-chart-area me-1"></i>
+                                                    Area Chart Example
+                                                </div>
+                                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                             </div>
-                                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="card mb-4">
-                                            <div class="card-header">
-                                                <i class="fas fa-chart-bar me-1"></i>
-                                                Bar Chart Example
+                                        <div class="col-xl-6">
+                                            <div class="card mb-4">
+                                                <div class="card-header">
+                                                    <i class="fas fa-chart-bar me-1"></i>
+                                                    Bar Chart Example
+                                                </div>
+                                                <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                             </div>
-                                            <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                         </div>
-                                    </div>
-                                    -->
+                                        -->
                 <div class="container">
                     <div class="card mb-4">
                         <div class="card-header">
@@ -93,7 +93,7 @@
                                         <th><button type="button" class="btn btn-success">Cadastrar</button></th>
                                     </tr>
                                 </tfoot>
-                                <tbody>
+                                {{-- <tbody>
                                     @foreach ($products as $product)
                                         <tr>
                                             <td>{{ $product->prod_id }}</td>
@@ -109,7 +109,27 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                </tbody> --}}
+                                
+                                <tbody>
+                                    @foreach ($mercadors as $mercado)
+                                        <tr>
+                                            <td>{{ $mercado->codigoint }}</td>
+                                            <td>{{ $mercado->descricao_completa }}</td>
+                                            <td>R${{ $mercado->valor }}</td>
+                                            <td>R${{ $mercado->PrecoOferta }}</td>
+                                            <td>{{ $mercado->dthr_alt }}</td>
+                                            <td>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckDefault" {{ $mercado->checked }}>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
+
+
                             </table>
                         </div>
                     </div>
