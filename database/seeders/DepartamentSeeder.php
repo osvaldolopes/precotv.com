@@ -16,9 +16,9 @@ class DepartamentSeeder extends Seeder
         // MODEL PRODUCTS
         //Departament::factory(10)->create();
 
-        if (!Departament::where('departament_id', '37')->first()){
+        if (!Departament::where('departament_id', '65')->first()){
             Departament::create([
-                'departament_id' => '37',
+                'departament_id' => '65',
                 'dep_description' => 'Padaria',                
             ]);
         }
@@ -28,10 +28,16 @@ class DepartamentSeeder extends Seeder
                 'dep_description' => 'Açougue',                
             ]);
         }
-        if (!Departament::where('departament_id', '39')->first()){
+        if (!Departament::where('departament_id', '35')->first()){
             Departament::create([
-                'departament_id' => '39',
+                'departament_id' => '35',
                 'dep_description' => 'Frios',                
+            ]);
+        }
+        if (!Departament::where('departament_id', '32')->first()){
+            Departament::create([
+                'departament_id' => '32',
+                'dep_description' => 'FLV',                
             ]);
         }
     }

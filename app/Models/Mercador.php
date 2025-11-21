@@ -12,12 +12,12 @@ class Mercador extends Model
     //protected $connection = 'db_precotv';
     protected $table = 'mercador_parcial';
 
-    // protected $fillable = [
-    //     'codigoint',
-    //     'depto',
-    //     'descricao_completa',
-    //     'valor',
-    //     'PrecoOferta',
-    //     'dataalt',
-    // ];
+    protected $fillable = [
+        'codigoint',
+        'depto',
+        'descricao_completa',
+        'valor',
+        'PrecoOferta',
+        'dthr_alt',
+    ];
 }

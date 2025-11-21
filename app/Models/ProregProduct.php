@@ -9,12 +9,12 @@ class ProregProduct extends Model
 {
     use HasFactory;
 
-    protected $connection = "mysql_oracle";
+    // protected $connection = "mysql_oracle";
 
-    protected $fillable = [
-        'proreg_id',
-        'proreg_description',
-        'proreg_price',
-        'proreg_promo',
-    ];
+    // protected $fillable = [
+    //     'proreg_id',
+    //     'proreg_description',
+    //     'proreg_price',
+    //     'proreg_promo',
+    // ];
 }

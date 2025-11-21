@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function home()
     {     
-        $products = Product::where('prod_checked', '=', 'checked')->simplePaginate(12);
+        $products = Product::where('prod_checked', '=', 'checked')->simplePaginate(14);
         return view('home', [
             'products' => $products
         ]);
