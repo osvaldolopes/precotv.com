@@ -9,19 +9,24 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();            
-            $table->bigInteger('prod_id')->default(0);
-            $table->foreignId('departament_id')->constrained()->onDelete('CASCADE')->onUpdate('CASCADE');            
+            $table->id(); // chave primária auto incremento
+            $table->integer('prod_cod');
+            $table->foreignId('departament_id') // chave estrangeira
+                ->constrained('departaments') // referencia a tabela departaments
+                ->onDelete('cascade');        // se o departament for deletado, deleta os produtos
             $table->string('prod_description', 100);
-            $table->decimal('prod_price')->default(0.00);
-            $table->decimal('prod_promo')->nullable()->default(0.00);  
+            $table->decimal('prod_price', 10, 2)->default(0.00);
+            $table->decimal('prod_promo', 10, 2)->nullable()->default(0.00);
             $table->char('prod_checked', 8)->nullable();
-            $table->timestamps();            
+            $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
