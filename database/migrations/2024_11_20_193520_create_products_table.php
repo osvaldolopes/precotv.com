@@ -15,14 +15,19 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id(); // chave primária auto incremento
-            $table->integer('prod_cod');
-            $table->foreignId('departament_id') // chave estrangeira
-                ->constrained('departaments') // referencia a tabela departaments
-                ->onDelete('cascade');        // se o departament for deletado, deleta os produtos
+            $table->bigInteger('prod_cod');
             $table->string('prod_description', 100);
             $table->decimal('prod_price', 10, 2)->default(0.00);
             $table->decimal('prod_promo', 10, 2)->nullable()->default(0.00);
-            $table->char('prod_checked', 8)->nullable();
+            $table->string('prod_checked', 8)->nullable();
+
+            // relacionamento
+            $table->unsignedBigInteger('departament_id');
+            $table->foreign('departament_id')
+                ->references('departament_id')
+                ->on('departaments')
+                ->onDelete('cascade'); // se o departamento for excluído, exclui os produtos
+
             $table->timestamps();
         });
     }

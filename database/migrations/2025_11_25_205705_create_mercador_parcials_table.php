@@ -11,20 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('departaments', function (Blueprint $table) {
-            $table->bigIncrements('departament_id'); // chave primária auto incremento
-            $table->string('dep_description', 120);
-            $table->string('img_url')->nullable();
+        Schema::create('mercador_parcials', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('departaments');
+        Schema::dropIfExists('mercador_parcials');
     }
 };

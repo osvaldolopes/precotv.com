@@ -58,7 +58,7 @@
                             <tbody>
                                 @forelse ($products as $product)
                                     <tr>
-                                        <td>{{ $product->prod_id }}</td>
+                                        <td>{{ $product->prod_cod }}</td>
                                         <td>{{ $product->prod_description }}</td>
                                         <td class="table-preco">
                                             @if ($product->prod_promo > 0)

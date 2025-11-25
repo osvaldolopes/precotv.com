@@ -18,7 +18,7 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            'prod_id' => fake()->randomNumber(5, true),
+            'prod_cod' => fake()->randomNumber(5, true),
             'departament_id' => '65',
             'prod_description' => 'PÃO FRANCES KG SUPER NETO',
             'prod_price' => fake()->randomFloat(1, 20, 30),
