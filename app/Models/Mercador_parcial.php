@@ -10,7 +10,7 @@ class Mercador_parcial extends Model
     use HasFactory;
 
     //protected $connection = 'db_precotv';
-    protected $table = 'mercador_parcials';
+    //protected $table = 'mercador_parcials';
 
     protected $fillable = [
         'codigoint',
