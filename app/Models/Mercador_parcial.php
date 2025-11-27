@@ -13,11 +13,11 @@ class Mercador_parcial extends Model
     //protected $table = 'mercador_parcials';
 
     protected $fillable = [
-        'codigoint',
-        'depto',
-        'descricao_completa',
+        'prod_cod',
+        'prod_description',
         'valor',
-        'PrecoOferta',
-        'dthr_alt',
+        'PrecoOferta',       
+        'departament_id',
+        'prod_checked',
     ];
 }
