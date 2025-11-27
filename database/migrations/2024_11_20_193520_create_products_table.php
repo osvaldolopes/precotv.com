@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id(); // chave primária auto incremento
             $table->bigInteger('prod_cod');
             $table->string('prod_description', 100);
-            $table->decimal('prod_price', 10, 2)->default(0.00);
-            $table->decimal('prod_promo', 10, 2)->nullable()->default(0.00);
+            $table->decimal('valor', 10, 2)->default(0.00);
+            $table->decimal('PrecoOferta', 10, 2)->nullable()->default(0.00);
             $table->string('prod_checked', 8)->nullable();
 
             // relacionamento

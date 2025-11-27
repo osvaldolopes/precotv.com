@@ -44,7 +44,7 @@
                             @foreach ($products as $product)
                                 @if ($product->prod_checked == 'checked')
                                     <tr>
-                                        <td>{{ $product->prod_id }}</td>
+                                        <td>{{ $product->prod_cod }}</td>
                                         <td>{{ $product->prod_description }}</td>
                                         <td>R${{ $product->prod_price }}</td>
                                         <td>R${{ $product->prod_promo }}</td>

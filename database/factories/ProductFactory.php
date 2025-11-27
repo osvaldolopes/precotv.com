@@ -21,8 +21,8 @@ class ProductFactory extends Factory
             'prod_cod' => fake()->randomNumber(5, true),
             'departament_id' => '65',
             'prod_description' => 'PÃO FRANCES KG SUPER NETO',
-            'prod_price' => fake()->randomFloat(1, 20, 30),
-            'prod_promo' => fake()->randomFloat(1, 20, 30),
+            'valor' => fake()->randomFloat(1, 20, 30),
+            'PrecoOferta' => fake()->randomFloat(1, 20, 30),
         ];
     }
 }

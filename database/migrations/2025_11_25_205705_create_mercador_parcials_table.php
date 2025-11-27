@@ -12,8 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mercador_parcials', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_parcials');
+            $table->integer('codigoint');
+            $table->bigInteger('depto');
+            $table->string('descricao_completa', 100);
+            $table->decimal('valor', 10, 2)->default(0.00);
+            $table->decimal('PrecoOferta', 10, 2)->nullable()->default(0.00);
+            $table->timestamp('dthr_alt');
+            $table->string('prod_checked', 8)->nullable();
         });
     }
 
