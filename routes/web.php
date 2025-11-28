@@ -34,7 +34,6 @@ Route::post('/register', [UserController::class, 'registered'])->name('register.
 Route::get('/dashboard', [MercadorController::class, 'dashboard'])->name('dashboard');
 //Route::get('/dashboard', [ProductController::class, 'dashboard'])->name('dashboard');
 Route::get('/tables', [ProductController::class, 'tables'])->name('tables');
-Route::get('/integration', [ProregController::class, 'proregproduct'])->name('integration');
 
 //MENSAGENS
 Route::get('/message', [MessageController::class, 'message'])->name('message');

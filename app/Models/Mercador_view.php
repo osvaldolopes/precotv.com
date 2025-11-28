@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Mercador_view extends Model
 {
     use HasFactory;
+
+    //protected $connection = 'db_precotv';
+    protected $table = 'mercador_precos_view';
+
+    protected $fillable = [
+        'prod_cod',
+        'prod_description',
+        'valor',
+        'PrecoOferta',
+        'prod_checked',
+        'department_id',
+    ];
 }

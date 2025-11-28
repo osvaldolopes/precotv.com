@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mercador_view;
 use App\Models\Product;
 
 class HomeController extends Controller
 {
     public function home()
     {     
-        $products = Product::where('prod_checked', '=', 'checked')->simplePaginate(14);
+        $mercador_views = Mercador_view::where('prod_checked', '=', 'checked')->simplePaginate(14);
         return view('home', [
-            'products' => $products
+            'mercador_views' => $mercador_views
         ]);
     }
 }
