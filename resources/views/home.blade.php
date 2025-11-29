@@ -56,16 +56,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($products as $product)
+                                @forelse ($mercador_views as $mercador_view)
                                     <tr>
-                                        <td>{{ $product->prod_cod }}</td>
-                                        <td>{{ $product->prod_description }}</td>
+                                        <td>{{ $mercador_view->prod_cod }}</td>
+                                        <td>{{ $mercador_view->prod_description }}</td>
                                         <td class="table-preco">
-                                            @if ($product->prod_promo > 0)
+                                            @if ($mercador_view->PrecoOferta > 0)
                                                 <i class="fas fa-arrow-alt-circle-down"></i> R$
-                                                {{ $product->prod_promo }}
+                                                {{ $mercador_view->PrecoOferta }}
                                             @else
-                                                <i class="px-3"></i> R$ {{ $product->prod_price }}
+                                                <i class="px-3"></i> R$ {{ $mercador_view->valor }}
                                             @endif
                                         </td>
                                     </tr>
@@ -76,7 +76,7 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        {{-- {{ $products->links() }} --}}
+                        {{-- {{ $mercador_views->links() }} --}}
                     </div>
                 </div>
             </div>
