@@ -41,14 +41,14 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            @foreach ($products as $product)
-                                @if ($product->prod_checked == 'checked')
+                            @foreach ($mercador_views as $mercador_view)
+                                @if ($mercador_view->departament_id == '37')
                                     <tr>
-                                        <td>{{ $product->prod_cod }}</td>
-                                        <td>{{ $product->prod_description }}</td>
-                                        <td>R${{ $product->prod_price }}</td>
-                                        <td>R${{ $product->prod_promo }}</td>
-                                        <td>{{ $product->created_at->format('d/m/Y H:i') }}</td>
+                                        <td>{{ $mercador_view->prod_cod }}</td>
+                                        <td>{{ $mercador_view->prod_description }}</td>
+                                        <td>R${{ $mercador_view->valor }}</td>
+                                        <td>R${{ $mercador_view->PrecoOferta }}</td>
+                                        <td>{{ $mercador_view->created_at->format('d/m/Y H:i') }}</td>
                                         <td>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
