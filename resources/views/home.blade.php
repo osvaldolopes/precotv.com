@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     {{-- ATUALIZAÇÃO AUTOMATICA A CADA 10 SEGUNDOS --}}
-    <meta http-equiv="refresh" content="10">
+    <meta http-equiv="refresh" content="30">
 
     <!-- Favicons -->
 
@@ -60,18 +60,20 @@
                             </thead>
                             <tbody>
                                 @forelse ($mercador_views as $mercador_view)
-                                    <tr>
-                                        <td>{{ $mercador_view->prod_cod }}</td>
-                                        <td>{{ $mercador_view->prod_description }}</td>
-                                        <td class="table-preco">
-                                            @if ($mercador_view->PrecoOferta > 0)
-                                                <i class="fas fa-arrow-alt-circle-down"></i> R$
-                                                {{ $mercador_view->PrecoOferta }}
-                                            @else
-                                                <i class="px-3"></i> R$ {{ $mercador_view->valor }}
-                                            @endif
-                                        </td>
-                                    </tr>
+                                    @if ($mercador_view->departament_id == "65")
+                                        <tr>
+                                            <td>{{ $mercador_view->prod_cod }}</td>
+                                            <td>{{ $mercador_view->prod_description }}</td>
+                                            <td class="table-preco">
+                                                @if ($mercador_view->PrecoOferta > 0)
+                                                    <i class="fas fa-arrow-alt-circle-down"></i> R$
+                                                    {{ $mercador_view->PrecoOferta }}
+                                                @else
+                                                    <i class="px-3"></i> R$ {{ $mercador_view->valor }}
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endif
                                 @empty
                                     <tr>
                                         <td>Tabela Vazia</td>

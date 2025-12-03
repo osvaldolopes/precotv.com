@@ -1,10 +1,31 @@
 /**
-* Template Name: Nova
+* Template Name: PREÇO TV - v1.0.0
 * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+/*--------------------------------------------------------------
+# OCULTA A BARRA DE ROLAGEM DA HONE PAGE
+--------------------------------------------------------------*/
+
+/* Chrome, Safari e Edge (WebKit) */
+::-webkit-scrollbar {
+  width: 0px;       /* largura zero */
+  height: 0px;      /* altura zero */
+  display: none;    /* força ocultar */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none; /* oculta a barra */
+}
+
+/* IE/Edge Legacy */
+* {
+  -ms-overflow-style: none;
+}
 
 /*--------------------------------------------------------------
 # Font & Color Variables
