@@ -7,6 +7,9 @@
     <title>Preço TV</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    {{-- ATUALIZAÇÃO AUTOMATICA A CADA 10 SEGUNDOS --}}
+    <meta http-equiv="refresh" content="10">
+
     <!-- Favicons -->
 
     <!-- Fonts -->

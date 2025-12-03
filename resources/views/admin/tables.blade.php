@@ -42,7 +42,7 @@
                         </tfoot>
                         <tbody>
                             @foreach ($mercador_views as $mercador_view)
-                                @if ($mercador_view->departament_id == '37')
+                                @if ($mercador_view->departament_id == '65')
                                     <tr>
                                         <td>{{ $mercador_view->prod_cod }}</td>
                                         <td>{{ $mercador_view->prod_description }}</td>
