@@ -17,9 +17,9 @@ return new class extends Migration
             $table->bigInteger('depto');
             $table->string('descricao_completa', 100);
             $table->decimal('valor', 10, 2)->default(0.00);
-            $table->decimal('PrecoOferta', 10, 2)->nullable()->default(0.00);
-            $table->timestamp('dthr_alt');
+            $table->decimal('PrecoOferta', 10, 2)->nullable()->default(0.00);            
             $table->string('prod_checked', 8)->nullable();
+            $table->timestamps();
         });
     }
 

@@ -118,7 +118,7 @@
                                             <td>{{ $mercado->descricao_completa }}</td>
                                             <td>R${{ $mercado->valor }}</td>
                                             <td>R${{ $mercado->PrecoOferta }}</td>
-                                            <td>{{ $mercado->dthr_alt }}</td>
+                                            <td>{{ $mercado->created_at->format('d/m/Y H:i') }}</td>
                                             <td>
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="checkbox"

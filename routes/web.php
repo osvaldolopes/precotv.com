@@ -6,7 +6,6 @@ use App\Http\Controllers\MercadorController;
 use App\Http\Controllers\MercadorViewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProregController;
 use App\Http\Controllers\MessageController;
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +24,9 @@ use App\Http\Controllers\MessageController;
 //HOME
 
 
-Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/{dp_id}', [HomeController::class, 'home'])
+    ->where('dp_id', '[0-9]+')
+    ->name('home');
 
 //LOGIN
 Route::get('/login', [UserController::class, 'login'])->name('login');

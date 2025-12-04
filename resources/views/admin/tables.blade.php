@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Tabelas de Produtos</h1>
+            <h1 class="mt-4">Tabelas de Produtos Cadastrados</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
                 <li class="breadcrumb-item active">Tables</li>
@@ -17,6 +17,14 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     Produtos Cadastrados
+                    <div class="card-header">                   
+                        <select name="departamento" class="form-select">
+                            <option value="65" {{ old('departamento') == 65 ? 'selected' : '' }}>Padaria</option>
+                            <option value="37" {{ old('departamento') == 37 ? 'selected' : '' }}>Açougue</option>
+                            <option value="35" {{ old('departamento') == 35 ? 'selected' : '' }}>Frios</option>
+                            <option value="32" {{ old('departamento') == 32 ? 'selected' : '' }}>FLV</option>
+                        </select>                                               
+                    </div>
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
@@ -42,7 +50,7 @@
                         </tfoot>
                         <tbody>
                             @foreach ($mercador_views as $mercador_view)
-                                @if ($mercador_view->departament_id == '65')
+                                @if ($mercador_view->departament_id == 65)
                                     <tr>
                                         <td>{{ $mercador_view->prod_cod }}</td>
                                         <td>{{ $mercador_view->prod_description }}</td>
