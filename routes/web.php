@@ -40,5 +40,3 @@ Route::get('/tables', [MercadorViewController::class, 'tables'])->name('tables')
 
 //MENSAGENS
 Route::get('/message', [MessageController::class, 'message'])->name('message');
-Route::get('/teste', [MessageController::class, 'teste'])->name('teste');
-

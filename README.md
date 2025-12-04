@@ -13,6 +13,7 @@
 - composer install
 - Duplicar o arquivo .env.example para um arquivo .env
 - php artisan key:generate
+- php artisan migrate:fresh --seed
 - php artisan migrate
 
 ## APRENDENDO LARAVEL

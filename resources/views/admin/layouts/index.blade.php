@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +10,7 @@
     <title>Dashboard - </title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="{{ asset('./assets/css/styles.css') }}" rel="stylesheet" />
-    
+
     <!-- ICONES DA CLASS FA FA -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +22,7 @@
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
-        <!-- Login -->        
+        <!-- Login -->
         <ul class="navbar-nav ms-auto me-lg-4 d-md-inline-block me-0 me-md-3 my-2">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
@@ -85,7 +86,7 @@
                                         <a class="nav-link" href="register">Cadastro Usuario</a>
                                         <a class="nav-link" href="password">Esqueceu Senha</a>
                                     </nav>
-                                </div>                   
+                                </div>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>
