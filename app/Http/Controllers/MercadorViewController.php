@@ -7,12 +7,20 @@ use Illuminate\Http\Request;
 
 class MercadorViewController extends Controller
 {
-    public function tables()
+    public function tables(Request $request)
     {
-        $mercador_views = Mercador_view::all();
-        //dd($products->toArray());       
+        // Captura o valor do select (GET ou POST)
+        $departamentoId = $request->input('departamento');
+
+        // Se o usuário escolheu um departamento, filtra
+        $mercador_views = Mercador_view::when($departamentoId, function ($query) use ($departamentoId) {
+            return $query->where('departament_id', $departamentoId);
+        })->get();
+
+        // Retorna para a view
         return view('admin.tables', [
             'mercador_views' => $mercador_views
         ]);
     }
 }
+

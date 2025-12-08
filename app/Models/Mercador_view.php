@@ -18,7 +18,7 @@ class Mercador_view extends Model
         'prod_description',
         'valor',
         'PrecoOferta',
-        'departament_id',
         'prod_checked',
+        'departament_id',       
     ];
 }

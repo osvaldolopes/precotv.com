@@ -19,11 +19,9 @@ use App\Http\Controllers\MessageController;
 */
 
 //Route::verb('uri', Controller::method)->name('route-name');
-//O QUE E DIGITADO NA URI    CLASSE CONTROLE     NOME DA ROTA   ?page=1
+//O QUE E DIGITADO NA URI    CLASSE CONTROLE->FUNÇÃO     NOME DA ROTA   
 
 //HOME
-
-
 Route::get('/{dp_id}', [HomeController::class, 'home'])
     ->where('dp_id', '[0-9]+')
     ->name('home');
@@ -37,6 +35,7 @@ Route::post('/register', [UserController::class, 'registered'])->name('register.
 //PRODUCT
 Route::get('/dashboard', [MercadorController::class, 'dashboard'])->name('dashboard');
 Route::get('/tables', [MercadorViewController::class, 'tables'])->name('tables');
+Route::post('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create');
 
 //MENSAGENS
 Route::get('/message', [MessageController::class, 'message'])->name('message');

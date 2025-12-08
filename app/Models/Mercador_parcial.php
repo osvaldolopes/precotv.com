@@ -12,12 +12,16 @@ class Mercador_parcial extends Model
     //protected $connection = 'db_precotv';
     //protected $table = 'mercador_parcials';
 
+    // Define a chave primária personalizada
+    protected $primaryKey = 'id_parcials';
+
     protected $fillable = [
-        'prod_cod',
-        'prod_description',
-        'valor',
-        'PrecoOferta',       
-        'departament_id',
+        'id_parcials',
+        'codigoint',
+        'depto',
+        'descricao_completa',
+        'valor',       
+        'PrecoOferta',
         'prod_checked',
     ];
 }

@@ -24,6 +24,12 @@ class DepartamentSeeder extends Seeder
         }
         if (!Departament::where('departament_id', '38')->first()){
             Departament::create([
+                'departament_id' => '38',
+                'dep_description' => 'Ilha',                
+            ]);
+        }
+        if (!Departament::where('departament_id', '37')->first()){
+            Departament::create([
                 'departament_id' => '37',
                 'dep_description' => 'Acougue',                
             ]);
