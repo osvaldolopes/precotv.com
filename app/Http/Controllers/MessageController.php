@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Symfony\Component\Process\Process;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -15,7 +16,7 @@ class MessageController extends Controller
     {
         return view('admin.teste');
     }
-    
+
     public function log()
     {
         // Caminho absoluto do arquivo
@@ -32,5 +33,19 @@ class MessageController extends Controller
         } else {
             return response("Arquivo não encontrado.", 404);
         }
+    }
+
+    public function executarpython()
+    {
+        $process = new Process([
+            '/var/www/html/uptabela.com/venv/bin/python',
+            '/var/www/html/uptabela.com/main.py'
+        ]);
+        $process->run();
+
+        if (!$process->isSuccessful()) {
+            return "Erro: " . $process->getErrorOutput();
+        }
+        return "Resultado: " . $process->getOutput();
     }
 }

@@ -42,3 +42,4 @@ Route::get('/message', [MessageController::class, 'message'])->name('message');
 
 //LOGS DO SISTEMA
 Route::get('/log', [MessageController::class, 'log'])->name('log');
+Route::get('/executarpython', [MessageController::class, 'executarpython'])->name('executarpython');
