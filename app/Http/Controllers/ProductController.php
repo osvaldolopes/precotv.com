@@ -25,11 +25,11 @@ class ProductController extends Controller
 
             if ($mercado) {
                 Product::create([
-                    'prod_cod'        => $mercado->codigoint,
+                    'prod_cod'         => $mercado->codigoint,
                     'prod_description' => $mercado->descricao_completa,
-                    'valor'           => $mercado->valor,
-                    'PrecoOferta'     => $mercado->PrecoOferta,
-                    'prod_checked'    => "checked",
+                    'valor'            => $mercado->valor,
+                    'PrecoOferta'      => $mercado->PrecoOferta,
+                    'prod_checked'     => "checked",
                     'departament_id'   => $mercado->depto,
                 ]);
             }

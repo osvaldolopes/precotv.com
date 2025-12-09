@@ -36,12 +36,6 @@ class UserController extends Controller
             return redirect('register');
         }else{
             return redirect('message');
-        }   
-
-
-        
-        
-
-        
+        }         
     }
 }

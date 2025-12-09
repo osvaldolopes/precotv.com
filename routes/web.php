@@ -18,7 +18,7 @@ use App\Http\Controllers\MessageController;
 |
 */
 
-//Route::verb('uri', Controller::method)->name('route-name');
+//Route::verb('uri',         Controller::method)         ->name('route-name');
 //O QUE E DIGITADO NA URI    CLASSE CONTROLE->FUNÇÃO     NOME DA ROTA   
 
 //HOME
@@ -27,7 +27,7 @@ Route::get('/{dp_id}', [HomeController::class, 'home'])
     ->name('home');
 
 //LOGIN
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/', [UserController::class, 'login'])->name('login');
 Route::get('/password', [UserController::class, 'password'])->name('password');
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register', [UserController::class, 'registered'])->name('register.registered');
@@ -39,3 +39,6 @@ Route::post('/dashboard/create', [ProductController::class, 'create'])->name('da
 
 //MENSAGENS
 Route::get('/message', [MessageController::class, 'message'])->name('message');
+
+//LOGS DO SISTEMA
+Route::get('/log', [MessageController::class, 'log'])->name('log');
