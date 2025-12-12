@@ -20,7 +20,7 @@ class MessageController extends Controller
     public function log()
     {
         // Caminho absoluto do arquivo
-        $filePath = '/var/www/html/precotv.com/public/log.txt';
+        $filePath = public_path('log.txt');
 
         // Verifica se o arquivo existe
         if (file_exists($filePath)) {
