@@ -12,11 +12,6 @@ class MessageController extends Controller
         return view('admin.message');
     }
 
-    public function teste()
-    {
-        return view('admin.teste');
-    }
-
     public function log()
     {
         // Caminho absoluto do arquivo

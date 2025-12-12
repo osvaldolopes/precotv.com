@@ -60,7 +60,7 @@
                             </thead>
                             <tbody>
                                 @forelse ($mercador_views as $mercador_view)
-                                    @if ($mercador_view->departament_id ==  $dp_id)
+                                    @if ($mercador_view->departament_id == $dp_id)
                                         <tr>
                                             <td>{{ $mercador_view->prod_cod }}</td>
                                             <td>{{ $mercador_view->prod_description }}</td>
@@ -89,24 +89,22 @@
 
         <!-- Hero Section -->
         <section class="hero section dark-background">
-            <img src="assets/img/produtos de padaria.png" alt="">
+            <img src="assets/img/padaria.png" alt="">
             <div class="container">
                 <div class="col-xl-4">
 
                     <h1 data-aos="fade-up">Padaria</h1>
                     <blockquote data-aos="fade-up" data-aos-delay="100">
-
                         <p>
-                            Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As vitrines
+                            Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As
+                            vitrines
                             estão repletas de doces e salgados, convidando todos a desfrutarem das delícias
                             caseiras. Cada visita é uma promessa de momentos saborosos e acolhedores. 🥖✨
                         </p>
                     </blockquote>
-
                     <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- /Hero Section -->
