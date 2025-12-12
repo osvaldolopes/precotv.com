@@ -37,5 +37,23 @@ class ProductController extends Controller
 
         return redirect()->route('dashboard')
             ->with('success', 'Produtos cadastrados com sucesso!');
-    }    
+    }
+
+    public function deleteSelected(Request $request)
+    {
+        // Valida que pelo menos um item foi selecionado
+        $request->validate([
+            'ids' => 'required|array|min:1',
+        ], [
+            'ids.required' => 'Selecione pelo menos um produto para deletar.',
+            'ids.min' => 'Selecione pelo menos um produto para deletar.',
+        ]);
+
+        $idsSelecionados = $request->input('ids', []);
+
+        // Deleta todos os produtos selecionados
+        Product::whereIn('id', $idsSelecionados)->delete();
+
+        return back()->with('success', 'Produtos deletados com sucesso!');
+    }
 }

@@ -20,9 +20,12 @@
                     <div class="card-body col-3">
                         <form method="GET" action="{{ route('tables') }}">
                             <select name="departamento" class="form-select" onchange="this.form.submit()">
-                                <option value="65" {{ request('departamento') == 65 ? 'selected' : '' }}>Padaria</option>
-                                <option value="38" {{ request('departamento') == 38 ? 'selected' : '' }}>Padaria/Ilha</option>
-                                <option value="37" {{ request('departamento') == 37 ? 'selected' : '' }}>Açougue</option>
+                                <option value="65" {{ request('departamento') == 65 ? 'selected' : '' }}>Padaria
+                                </option>
+                                <option value="38" {{ request('departamento') == 38 ? 'selected' : '' }}>Padaria/Ilha
+                                </option>
+                                <option value="37" {{ request('departamento') == 37 ? 'selected' : '' }}>Açougue
+                                </option>
                                 <option value="35" {{ request('departamento') == 35 ? 'selected' : '' }}>Frios</option>
                                 <option value="32" {{ request('departamento') == 32 ? 'selected' : '' }}>FLV</option>
                             </select>
@@ -30,46 +33,62 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="datatablesSimple">
-                        <thead>
-                            <tr>
-                                <th>Codigo</th>
-                                <th>Descrição</th>
-                                <th>Preço</th>
-                                <th>Promoção</th>
-                                <th>Data Cadastro</th>
-                                <th><button type="button" class="btn btn-danger"> Deletar</button></th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Codigo</th>
-                                <th>Descrição</th>
-                                <th>Preço</th>
-                                <th>Promoção</th>
-                                <th>Data Cadastro</th>
-                                <th><button type="button" class="btn btn-danger"> Deletar</button></th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            @foreach ($mercador_views as $mercador_view)
+                    <div class="card-body col-3">
+                        <input type="checkbox" id="select-all"> Selecionar Todos
+                    </div>
+                    <form method="POST" action="{{ route('tables.deleteSelected') }}">
+                        @csrf
+                        @method('DELETE')
+                        <table id="datatablesSimple">
+                            <thead>
                                 <tr>
-                                    <td>{{ $mercador_view->prod_cod }}</td>
-                                    <td>{{ $mercador_view->prod_description }}</td>
-                                    <td>R${{ $mercador_view->valor }}</td>
-                                    <td>R${{ $mercador_view->PrecoOferta }}</td>
-                                    <td>{{ $mercador_view->created_at->format('d/m/Y H:i') }}</td>
-                                    <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                        </div>
-                                    </td>
+                                    <th>Codigo</th>
+                                    <th>Descrição</th>
+                                    <th>Preço</th>
+                                    <th>Promoção</th>
+                                    <th>Data Cadastro</th>
+                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Descrição</th>
+                                    <th>Preço</th>
+                                    <th>Promoção</th>
+                                    <th>Data Cadastro</th>
+                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
+                                </tr>
+                            </tfoot>
+
+                            <tbody>
+                                @foreach ($mercador_views as $mercador_view)
+                                    <tr>
+                                        <td>{{ $mercador_view->prod_cod }}</td>
+                                        <td>{{ $mercador_view->prod_description }}</td>
+                                        <td>R${{ $mercador_view->valor }}</td>
+                                        <td>R${{ $mercador_view->PrecoOferta }}</td>
+                                        <td>{{ $mercador_view->created_at->format('d/m/Y H:i') }}</td>
+                                        <td>
+                                            <div class="form-check form-switch">
+
+                                                <input class="form-check-input" type="checkbox" name="ids[]"
+                                                    value="{{ $mercador_view->id }}">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>
     </main>
+    <script>
+        document.getElementById('select-all').onclick = function() {
+            let checkboxes = document.querySelectorAll('input[name="ids[]"]');
+            checkboxes.forEach(cb => cb.checked = this.checked);
+        }
+    </script>
 @endsection
