@@ -15,5 +15,6 @@ class Departament extends Model
         'departament_id',
         'dep_description',
         'img_url',
+        'dep_texto',
     ];
 }

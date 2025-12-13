@@ -7,7 +7,7 @@
     <title>Preço TV</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    {{-- ATUALIZAÇÃO AUTOMATICA A CADA 10 SEGUNDOS --}}
+    {{-- ATUALIZAÇÃO AUTOMATICA A CADA 30 SEGUNDOS --}}
     <meta http-equiv="refresh" content="30">
 
     <!-- Favicons -->
@@ -89,23 +89,28 @@
 
         <!-- Hero Section -->
         <section class="hero section dark-background">
-            <img src="assets/img/padaria.png" alt="">
-            <div class="container">
-                <div class="col-xl-4">
+            @forelse ($configdeptos as  $configdepto)
+                @if ($configdepto->departament_id == $dp_id)
+                    <img src="assets/img/{{ $configdepto->img_url }}" alt="">
+                    <div class="container">
+                        <div class="col-xl-4">
 
-                    <h1 data-aos="fade-up">Padaria</h1>
-                    <blockquote data-aos="fade-up" data-aos-delay="100">
-                        <p>
-                            Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As
-                            vitrines
-                            estão repletas de doces e salgados, convidando todos a desfrutarem das delícias
-                            caseiras. Cada visita é uma promessa de momentos saborosos e acolhedores. 🥖✨
-                        </p>
-                    </blockquote>
-                    <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <h1 data-aos="fade-up">{{ $configdepto->dep_description }}</h1>
+                            <blockquote data-aos="fade-up" data-aos-delay="100">
+                                <p>
+                                    Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As
+                                    vitrines
+                                    estão repletas de doces e salgados, convidando todos a desfrutarem das delícias
+                                    caseiras. Cada visita é uma promessa de momentos saborosos e acolhedores. 🥖✨
+                                </p>
+                            </blockquote>
+                            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                @endif
+            @empty
+            @endforelse
         </section>
         <!-- /Hero Section -->
 

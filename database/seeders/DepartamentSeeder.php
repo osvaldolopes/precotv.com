@@ -19,31 +19,35 @@ class DepartamentSeeder extends Seeder
         if (!Departament::where('departament_id', '65')->first()){
             Departament::create([
                 'departament_id' => '65',
-                'dep_description' => 'Padaria',                
+                'dep_description' => 'Padaria',  
             ]);
         }
         if (!Departament::where('departament_id', '38')->first()){
             Departament::create([
                 'departament_id' => '38',
-                'dep_description' => 'Ilha',                
+                'dep_description' => 'Padaria',  
+                'img_url' => 'padaria.png',            
             ]);
         }
         if (!Departament::where('departament_id', '37')->first()){
             Departament::create([
                 'departament_id' => '37',
-                'dep_description' => 'Acougue',                
+                'dep_description' => 'Açougue',   
+                'img_url' => 'acougue.png',              
             ]);
         }
         if (!Departament::where('departament_id', '35')->first()){
             Departament::create([
                 'departament_id' => '35',
-                'dep_description' => 'Frios',                
+                'dep_description' => 'Frios',
+                'img_url' => 'frios.png',                
             ]);
         }
         if (!Departament::where('departament_id', '32')->first()){
             Departament::create([
                 'departament_id' => '32',
-                'dep_description' => 'FLV',                
+                'dep_description' => 'FLV',
+                'img_url' => 'flv.png',               
             ]);
         }
     }

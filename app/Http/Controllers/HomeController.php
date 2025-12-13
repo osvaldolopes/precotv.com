@@ -12,14 +12,9 @@ class HomeController extends Controller
         if (!request()->has('page')) {
             return redirect()->route('home', ['page' => 1]);
         }
+        $configdeptos = Departament::all();
         $mercador_views = Mercador_view::where('departament_id', $dp_id)
             ->simplePaginate(14);
-        return view('home', ['dp_id' => $dp_id], compact('mercador_views'));
-
-        $configdeptos = Departament::all();
-
-        return view('home', [
-            'configdeptos' => $configdeptos
-        ]);
+        return view('home', ['dp_id' => $dp_id, 'configdeptos' => $configdeptos], compact('mercador_views'));
     }
 }

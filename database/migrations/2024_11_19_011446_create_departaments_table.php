@@ -15,6 +15,7 @@ return new class extends Migration
             $table->bigIncrements('departament_id'); // chave primária auto incremento
             $table->string('dep_description', 120);
             $table->string('img_url')->nullable();
+            $table->string('dep_texto', 255)->nullable();
             $table->timestamps();
         });
     }
