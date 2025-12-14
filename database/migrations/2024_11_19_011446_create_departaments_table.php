@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('departaments', function (Blueprint $table) {
-            $table->bigIncrements('departament_id'); // chave primária auto incremento
+            $table->bigIncrements('departament_id'); // chave primária
             $table->string('dep_description', 120);
             $table->string('img_url')->nullable();
             $table->string('dep_texto', 255)->nullable();

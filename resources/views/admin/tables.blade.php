@@ -20,12 +20,10 @@
                     <div class="card-body col-3">
                         <form method="GET" action="{{ route('tables') }}">
                             <select name="departamento" class="form-select" onchange="this.form.submit()">
-                                <option value="65" {{ request('departamento') == 65 ? 'selected' : '' }}>Padaria
-                                </option>
-                                <option value="38" {{ request('departamento') == 38 ? 'selected' : '' }}>Padaria/Ilha
-                                </option>
-                                <option value="37" {{ request('departamento') == 37 ? 'selected' : '' }}>Açougue
-                                </option>
+                                <option value="">Selecione o departamento</option>
+                                <option value="65" {{ request('departamento') == 65 ? 'selected' : '' }}>Padaria</option>
+                                <option value="38" {{ request('departamento') == 38 ? 'selected' : '' }}>Padaria/Ilha</option>
+                                <option value="37" {{ request('departamento') == 37 ? 'selected' : '' }}>Açougue</option>
                                 <option value="35" {{ request('departamento') == 35 ? 'selected' : '' }}>Frios</option>
                                 <option value="32" {{ request('departamento') == 32 ? 'selected' : '' }}>FLV</option>
                             </select>

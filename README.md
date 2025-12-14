@@ -16,6 +16,25 @@
 - php artisan migrate:fresh --seed
 - php artisan migrate
 
+## COLOCANDO O PROJETO EM PRODUÇÃO
+# No env
+
+- APP_ENV=production
+- APP_DEBUG=false
+- APP_URL=https://seusite.com
+
+# Limpar e recarregar o cache
+
+- php artisan config:clear
+- php artisan cache:clear
+- php artisan config:cache
+
+# Ativar otimizações de produção
+
+- php artisan route:cache
+- php artisan view:cache
+- php artisan optimize
+
 ## APRENDENDO LARAVEL
 
 O Laravel tem a mais extensa e completa [documentação](https://laravel.com/docs) e biblioteca de tutoriais em vídeo de todos os frameworks de aplicativos web modernos, facilitando muito o início do uso do framework.

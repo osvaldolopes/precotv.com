@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id(); // chave primária auto incremento
-            $table->bigInteger('prod_cod');
+            $table->bigInteger('prod_cod')->unique();
             $table->string('prod_description', 100);
             $table->decimal('valor', 10, 2)->default(0.00);
             $table->decimal('PrecoOferta', 10, 2)->nullable()->default(0.00);

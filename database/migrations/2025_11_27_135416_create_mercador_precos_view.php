@@ -12,6 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        DB::statement('DROP VIEW IF EXISTS mercador_precos_view');
         DB::statement("
         CREATE VIEW mercador_precos_view AS
         SELECT 

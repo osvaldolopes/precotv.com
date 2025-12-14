@@ -97,11 +97,7 @@
 
                             <h1 data-aos="fade-up">{{ $configdepto->dep_description }}</h1>
                             <blockquote data-aos="fade-up" data-aos-delay="100">
-                                <p>
-                                    Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As vitrines
-                                    estão repletas de doces e salgados, convidando todos a desfrutarem das delícias
-                                    caseiras. Cada visita é uma promessa de momentos saborosos e acolhedores. 🥖✨
-                                </p>
+                                <p>{{ $configdepto->dep_texto }}</p>
                             </blockquote>
                             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                             </div>
