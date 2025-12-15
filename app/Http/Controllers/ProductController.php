@@ -23,11 +23,8 @@ class ProductController extends Controller
         $duplicados = []; // ← aqui vamos guardar os itens já cadastrados
 
         foreach ($mercadosSelecionados as $idParcial) {
-
             $mercado = Mercador_parcial::find($idParcial);
-
             if ($mercado) {
-
                 // Verifica duplicidade
                 $existe = Product::where('prod_cod', $mercado->codigoint)->exists();
 
@@ -36,7 +33,6 @@ class ProductController extends Controller
                     $duplicados[] = "{$mercado->descricao_completa} (cód. {$mercado->codigoint})";
                     continue; // pula para o próximo sem parar o processo
                 }
-
                 // Cria o produto
                 Product::create([
                     'prod_cod'         => $mercado->codigoint,
@@ -54,6 +50,7 @@ class ProductController extends Controller
 
             $lista = implode('<br>', $duplicados);
 
+            // ✅ Verifica se todos eram duplicados e só exibe a mensagem correspondente
             if (count($duplicados) === count($mercadosSelecionados)) {
                 // Todos os itens eram duplicados
                 return redirect()->route('dashboard')->with([
@@ -65,15 +62,11 @@ class ProductController extends Controller
                     'success' => 'Os demais produtos foram cadastrados com sucesso!'
                 ]);
             }
-
-
         }
-
         // ✅ Caso contrário, sucesso total
         return redirect()->route('dashboard')
             ->with('success', 'Produtos cadastrados com sucesso!');
     }
-
 
     public function deleteSelected(Request $request)
     {

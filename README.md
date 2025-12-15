@@ -35,6 +35,8 @@
 - php artisan view:cache
 - php artisan optimize
 
+E para tirar de produção altera o arquivo .env e refaça os comando php artisan.
+
 ## APRENDENDO LARAVEL
 
 O Laravel tem a mais extensa e completa [documentação](https://laravel.com/docs) e biblioteca de tutoriais em vídeo de todos os frameworks de aplicativos web modernos, facilitando muito o início do uso do framework.
