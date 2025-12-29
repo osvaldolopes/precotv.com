@@ -5,12 +5,12 @@
             <h1 class="mt-4">Tabelas de Produtos Cadastrados</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active">Tables</li>
+                <li class="breadcrumb-item active">Produtos</li>
             </ol>
             <div class="card mb-4">
                 <div class="card-body">
                     Aqui estão os produtos que aparecem nos monitores de cada departamento.
-                    <a target="_blank" href="/">Preço TV</a>
+                    <a target="_blank" href="/precotv.com/public/65?page=1">Preço TV</a>
                 </div>
             </div>
             <div class="card mb-4">
@@ -45,7 +45,8 @@
                                     <th>Preço</th>
                                     <th>Promoção</th>
                                     <th>Data Cadastro</th>
-                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
+                                    <th>Atualizar</th>
+                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>                                    
                                 </tr>
                             </thead>
                             <tfoot>
@@ -55,7 +56,8 @@
                                     <th>Preço</th>
                                     <th>Promoção</th>
                                     <th>Data Cadastro</th>
-                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
+                                    <th>Atualizar</th>
+                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>                                    
                                 </tr>
                             </tfoot>
 
@@ -67,13 +69,14 @@
                                         <td>R${{ $mercador_view->valor }}</td>
                                         <td>R${{ $mercador_view->PrecoOferta }}</td>
                                         <td>{{ $mercador_view->created_at->format('d/m/Y H:i') }}</td>
+                                        <td><a href="{{ route('update') }}"><i class="fas fa-sync"></i> Atualizar</a></td>
                                         <td>
                                             <div class="form-check form-switch">
 
                                                 <input class="form-check-input" type="checkbox" name="ids[]"
                                                     value="{{ $mercador_view->id }}">
                                             </div>
-                                        </td>
+                                        </td>                                        
                                     </tr>
                                 @endforeach
                             </tbody>

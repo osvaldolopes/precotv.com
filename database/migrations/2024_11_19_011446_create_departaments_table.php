@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('dep_description', 120);
             $table->string('img_url')->nullable();
             $table->string('dep_texto', 255)->nullable();
+            $table->integer('paginate');
             $table->timestamps();
         });
     }

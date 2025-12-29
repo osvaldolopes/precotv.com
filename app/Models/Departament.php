@@ -16,5 +16,6 @@ class Departament extends Model
         'dep_description',
         'img_url',
         'dep_texto',
+        'paginate',
     ];
 }

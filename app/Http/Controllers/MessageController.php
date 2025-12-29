@@ -16,19 +16,25 @@ class MessageController extends Controller
     {
         // Caminho absoluto do arquivo
         $filePath = public_path('log.txt');
-
+    
         // Verifica se o arquivo existe
         if (file_exists($filePath)) {
-            // Lê o conteúdo do arquivo
-            $content = file_get_contents($filePath);
-
+            // Lê o conteúdo do arquivo em array de linhas
+            $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+            // Ordena em ordem decrescente
+            rsort($lines);
+    
+            // Junta novamente em uma string
+            $content = implode("\n", $lines);
+    
             // Exibe o conteúdo como texto simples
             return response($content, 200)
                 ->header('Content-Type', 'text/plain');
         } else {
             return response("Arquivo não encontrado.", 404);
         }
-    }
+    }   
 
     public function executarpython()
     {

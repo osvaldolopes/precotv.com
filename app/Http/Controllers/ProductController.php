@@ -85,4 +85,10 @@ class ProductController extends Controller
 
         return back()->with('success', 'Produtos deletados com sucesso!');
     }
+    
+    // Página de atualização de produtos
+    public function update()
+    {
+        return view('admin.update');
+    }
 }
