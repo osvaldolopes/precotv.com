@@ -36,6 +36,7 @@ Route::post('/register', [UserController::class, 'registered'])->name('register.
 //PRODUCT
 Route::get('/dashboard', [MercadorController::class, 'dashboard'])->name('dashboard');
 Route::post('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create');
+Route::get('/update', [ProductController::class, 'update'])->name('update');
 Route::get('/tables', [MercadorViewController::class, 'tables'])->name('tables');
 Route::delete('/tables/delete-selected', [ProductController::class, 'deleteSelected'])->name('tables.deleteSelected');
 

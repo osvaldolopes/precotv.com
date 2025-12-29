@@ -19,7 +19,8 @@ class DepartamentSeeder extends Seeder
         if (!Departament::where('departament_id', '65')->first()){
             Departament::create([
                 'departament_id' => '65',
-                'dep_description' => 'Padaria',  
+                'dep_description' => 'Padaria', 
+                'paginate' => '16',   
             ]);
         }
         if (!Departament::where('departament_id', '38')->first()){
@@ -29,7 +30,8 @@ class DepartamentSeeder extends Seeder
                 'img_url' => 'padaria.png', 
                 'dep_texto' => 'Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As vitrines
                                 estão repletas de doces e salgados, convidando todos a desfrutarem das delícias
-                                caseiras. 🥖✨',         
+                                caseiras. 🥖✨',     
+                'paginate' => '16',                     
             ]);
         }
         if (!Departament::where('departament_id', '37')->first()){
@@ -37,7 +39,8 @@ class DepartamentSeeder extends Seeder
                 'departament_id' => '37',
                 'dep_description' => 'Açougue',   
                 'img_url' => 'acougue.png',
-                'dep_texto' => 'No açougue, cada corte revela a arte, a precisão e o cuidado de quem transforma tradição em sabor. 🥩✨',              
+                'dep_texto' => 'No açougue, cada corte revela a arte, a precisão e o cuidado de quem transforma tradição em sabor. 🥩✨',
+                'paginate' => '16',             
             ]);
         }
         if (!Departament::where('departament_id', '35')->first()){
@@ -46,7 +49,8 @@ class DepartamentSeeder extends Seeder
                 'dep_description' => 'Frios',
                 'img_url' => 'frios.png',
                 'dep_texto' => 'Na seção de frios, cada fatia carrega frescor, qualidade e o cuidado de quem seleciona sabores 
-                                que transformam qualquer refeição em um momento especial. 🧀✨',              
+                                que transformam qualquer refeição em um momento especial. 🧀✨',
+                'paginate' => '16',                              
             ]);
         }
         if (!Departament::where('departament_id', '32')->first()){
@@ -55,7 +59,8 @@ class DepartamentSeeder extends Seeder
                 'dep_description' => 'FLV',
                 'img_url' => 'flv.png',
                 'dep_texto' => 'Na feirinha, cada banca conta uma história, misturando sabores, cores e sorrisos que transformam 
-                                a rotina em encontro e tradição. 🥬✨',               
+                                a rotina em encontro e tradição. 🥬✨',
+                'paginate' => '40',          
             ]);
         }
     }
