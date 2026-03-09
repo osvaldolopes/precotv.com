@@ -73,6 +73,13 @@
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
                             Selecione para Cadastrar na Tabela:
+                            @if (session('mensagem'))
+                                <div class="alert alert-{{ session('tipo') }} alert-dismissible fade show" role="alert">
+                                    {{ session('mensagem') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Fechar"></button>
+                                </div>
+                            @endif
                         </div>
                         <form method="POST" action="{{ route('dashboard.create') }}">
                             @csrf
@@ -117,7 +124,7 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-     
+
 
                                         @if (session('success'))
                                             <div class="alert alert-success">
