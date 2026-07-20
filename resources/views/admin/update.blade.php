@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="card mb-4">
-                <div class="card-header">                    
+                <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     Produtos Cadastrados
                     <form method="GET" action="{{ route('update') }}">
@@ -36,10 +36,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="inputEmail" type="text" name="email"
-                                value="{{ old('email') }}" placeholder="Entre com uma descrição" />
-                            <label for="inputEmail">Descrição</label>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <input class="form-control" id="inputEmail" type="text" name="email"
+                                        value="{{ old('email') }}" placeholder="Entre com uma descrição" />
+                                    <label for="inputEmail">Descrição</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputEmail" type="text" name="email"
+                                        value="{{ old('email') }}" placeholder="Entre com uma descrição" />
+                                    <label for="inputEmail">Oferta</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
@@ -50,13 +61,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-4 mb-0">
-                            <div class="d-grid"><a></a>
-                                <button type="submit" class="btn btn-primary btn-block">Atualizar</button>
-                            </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary w-25">Atualizar</button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

@@ -15,12 +15,26 @@ class DepartamentSeeder extends Seeder
     {
         // MODEL PRODUCTS
         //Departament::factory(10)->create();
-
+        if (!Departament::where('departament_id', '1')->first()){
+            Departament::create([
+                'departament_id' => '1',
+                'dep_description' => 'Departamentos',  
+                'img_url' => 'departaments.png', 
+                'dep_texto' => 'No browser, você acessa diferentes departamentos alterando parâmetros na URL. 
+                                Exemplo: http://192.168.0.150/38?page=1, onde 38 é o ID da padaria e 1 indica a 
+                                página desejada. ✨',     
+                'paginate' => '16',                     
+            ]);
+        }
         if (!Departament::where('departament_id', '65')->first()){
             Departament::create([
                 'departament_id' => '65',
-                'dep_description' => 'Padaria', 
-                'paginate' => '16',   
+                'dep_description' => 'Padaria',  
+                'img_url' => 'padaria1.png', 
+                'dep_texto' => 'Na padaria, o aroma do pão fresco desperta os sentidos logo ao amanhecer. As vitrines
+                                estão repletas de doces e salgados, convidando todos a desfrutarem das delícias
+                                caseiras. 🥖✨',     
+                'paginate' => '16',                     
             ]);
         }
         if (!Departament::where('departament_id', '38')->first()){

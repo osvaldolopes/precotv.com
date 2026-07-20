@@ -1,5 +1,11 @@
 @extends('admin.layouts.index')
 @section('content')
+    <style>
+        .form-check-input:checked {
+            background-color: rgb(146, 2, 2); /* cor de fundo quando marcado */
+            border-color: rgb(146, 2, 2); /* cor da borda quando marcado */
+        }
+    </style>
     <main>
         <div class="container-fluid px-4">
             <h1 class="mt-4">Tabelas de Produtos Cadastrados</h1>
@@ -10,7 +16,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     Aqui estão os produtos que aparecem nos monitores de cada departamento.
-                    <a target="_blank" href="/precotv.com/public/65?page=1">Preço TV</a>
+                    <a target="_blank" href="{{ asset('/1?page=1') }}">Preço TV</a>
                 </div>
             </div>
             <div class="card mb-4">
@@ -46,7 +52,7 @@
                                     <th>Promoção</th>
                                     <th>Data Cadastro</th>
                                     <th>Atualizar</th>
-                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>                                    
+                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -57,7 +63,7 @@
                                     <th>Promoção</th>
                                     <th>Data Cadastro</th>
                                     <th>Atualizar</th>
-                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>                                    
+                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
                                 </tr>
                             </tfoot>
 
@@ -76,7 +82,7 @@
                                                 <input class="form-check-input" type="checkbox" name="ids[]"
                                                     value="{{ $mercador_view->id }}">
                                             </div>
-                                        </td>                                        
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
