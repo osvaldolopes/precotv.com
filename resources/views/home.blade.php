@@ -53,7 +53,7 @@
                         <table class="table">
                             <thead>
                                 <tr class="table-top">
-                                    <td>CODIGO</td>
+                                    <td>CÓDIGO</td>
                                     <td>DESCRIÇÃO</td>
                                     <td>PREÇO</td>
                                 </tr>
@@ -118,7 +118,7 @@
                         <div class="text-center">
                             <h3>Login</h3>
                             <p>Criação de Setores, atualizações, cadastro de produtos.</p>
-                            <a class="cta-btn" href="login">Entrar</a>
+                            <a class="cta-btn" href="{{ asset('/') }}">Entrar</a>
                         </div>
                     </div>
                 </div>
