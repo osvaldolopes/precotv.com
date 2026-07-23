@@ -14,10 +14,12 @@
                     <a target="_blank" href="/precotv.com/public/65?page=1">Preço TV</a>
                 </div>
             </div>
-            <div class="card mb-4">
+            <div class="card mb-md-4">
                 <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    Produtos Cadastrados
+                    <div class="mb-md-3">
+                        <i class="fas fa-table me-1"></i>
+                        Produtos Cadastrados
+                    </div>
                     <form method="GET" action="{{ route('update') }}">
                         @csrf
                         <div class="row mb-3">
@@ -61,7 +63,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center mb-md-3 mt-4">
                             <button type="submit" class="btn btn-primary w-25">Atualizar</button>
                         </div>
                     </form>
