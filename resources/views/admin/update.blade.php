@@ -11,7 +11,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     Aqui você pode alterar a descrição do produto e ela não é alterada na importação.
-                    <a target="_blank" href="/precotv.com/public/65?page=1">Preço TV</a>
+                    <a target="_blank" href="{{ asset('/1?page=1') }}">Preço TV</a>
                 </div>
             </div>
             <div class="card mb-md-4">

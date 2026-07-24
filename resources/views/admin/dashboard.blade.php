@@ -77,67 +77,72 @@
                         <form method="POST" action="{{ route('dashboard.create') }}">
                             @csrf
                             <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Codigo</th>
-                                            <th>Departamento</th>
-                                            <th>Descrição</th>
-                                            <th>Preço</th>
-                                            <th>Promoção</th>
-                                            <th>Data Cadastro</th>
-                                            <th><button type="submit" class="btn btn-success">Cadastrar</button></th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Codigo</th>
-                                            <th>Departamento</th>
-                                            <th>Descrição</th>
-                                            <th>Preço</th>
-                                            <th>Promoção</th>
-                                            <th>Data Cadastro</th>
-                                            <th><button type="submit" class="btn btn-success">Cadastrar</button></th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        @foreach ($mercadors as $mercado)
+                                <div class="table-responsive">
+                                    @if (session('success'))
+                                        <div class="alert alert-success">
+                                            {!! session('success') !!}
+                                        </div>
+                                    @endif
+                                    @if (session('warning'))
+                                        <div class="alert alert-warning">
+                                            {!! session('warning') !!}
+                                        </div>
+                                    @endif
+                                    @if (session('mensagem'))
+                                        <div class="alert alert-{{ session('tipo') }} alert-dismissible fade show"
+                                            role="alert">
+                                            {{ session('mensagem') }}
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Fechar"></button>
+                                        </div>
+                                    @endif
+                                    <table id="datatablesSimple" class="table table-striped table-bordered">
+                                        <thead>
                                             <tr>
-                                                <td>{{ $mercado->codigoint }}</td>
-                                                <td>{{ $mercado->depto }}</td>
-                                                <td>{{ $mercado->descricao_completa }}</td>
-                                                <td>R${{ $mercado->valor }}</td>
-                                                <td>R${{ $mercado->PrecoOferta }}</td>
-                                                <td>{{ $mercado->created_at->format('d/m/Y H:i') }}</td>
-                                                <td>
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" name="mercados[]"
-                                                            value="{{ $mercado->id_parcials }}">
-                                                    </div>
-                                                </td>
+                                                <th>Codigo</th>
+                                                <th>Departamento</th>
+                                                <th>Descrição</th>
+                                                <th>Preço</th>
+                                                <th>Promoção</th>
+                                                <th>Data Cadastro</th>
+                                                <th>
+                                                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                                                </th>
                                             </tr>
-                                        @endforeach
-
-                                        @if (session('success'))
-                                            <div class="alert alert-success">
-                                                {!! session('success') !!}
-                                            </div>
-                                        @endif
-                                        @if (session('warning'))
-                                            <div class="alert alert-warning">
-                                                {!! session('warning') !!}
-                                            </div>
-                                        @endif
-                                        @if (session('mensagem'))
-                                            <div class="alert alert-{{ session('tipo') }} alert-dismissible fade show"
-                                                role="alert">
-                                                {{ session('mensagem') }}
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                                    aria-label="Fechar"></button>
-                                            </div>
-                                        @endif
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Codigo</th>
+                                                <th>Departamento</th>
+                                                <th>Descrição</th>
+                                                <th>Preço</th>
+                                                <th>Promoção</th>
+                                                <th>Data Cadastro</th>
+                                                <th>
+                                                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                                                </th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            @foreach ($mercadors as $mercado)
+                                                <tr>
+                                                    <td>{{ $mercado->codigoint }}</td>
+                                                    <td>{{ $mercado->depto }}</td>
+                                                    <td>{{ $mercado->descricao_completa }}</td>
+                                                    <td>R${{ $mercado->valor }}</td>
+                                                    <td>R${{ $mercado->PrecoOferta }}</td>
+                                                    <td>{{ $mercado->created_at->format('d/m/Y H:i') }}</td>
+                                                    <td>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="mercados[]" value="{{ $mercado->id_parcials }}">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </form>
                     </div>

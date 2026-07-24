@@ -2,8 +2,10 @@
 @section('content')
     <style>
         .form-check-input:checked {
-            background-color: rgb(146, 2, 2); /* cor de fundo quando marcado */
-            border-color: rgb(146, 2, 2); /* cor da borda quando marcado */
+            background-color: rgb(146, 2, 2);
+            /* cor de fundo quando marcado */
+            border-color: rgb(146, 2, 2);
+            /* cor da borda quando marcado */
         }
     </style>
     <main>
@@ -43,50 +45,58 @@
                     <form method="POST" action="{{ route('tables.deleteSelected') }}">
                         @csrf
                         @method('DELETE')
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                    <th>Codigo</th>
-                                    <th>Descrição</th>
-                                    <th>Preço</th>
-                                    <th>Promoção</th>
-                                    <th>Data Cadastro</th>
-                                    <th>Atualizar</th>
-                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Codigo</th>
-                                    <th>Descrição</th>
-                                    <th>Preço</th>
-                                    <th>Promoção</th>
-                                    <th>Data Cadastro</th>
-                                    <th>Atualizar</th>
-                                    <th><button type="submit" class="btn btn-danger mt-3">Deletar</button></th>
-                                </tr>
-                            </tfoot>
-
-                            <tbody>
-                                @foreach ($mercador_views as $mercador_view)
+                        <div class="table-responsive">
+                            <table id="datatablesSimple" class="table table-striped table-bordered">
+                                <thead>
                                     <tr>
-                                        <td>{{ $mercador_view->prod_cod }}</td>
-                                        <td>{{ $mercador_view->prod_description }}</td>
-                                        <td>R${{ $mercador_view->valor }}</td>
-                                        <td>R${{ $mercador_view->PrecoOferta }}</td>
-                                        <td>{{ $mercador_view->created_at->format('d/m/Y H:i') }}</td>
-                                        <td><a href="{{ route('update') }}"><i class="fas fa-sync"></i> Atualizar</a></td>
-                                        <td>
-                                            <div class="form-check form-switch">
-
-                                                <input class="form-check-input" type="checkbox" name="ids[]"
-                                                    value="{{ $mercador_view->id }}">
-                                            </div>
-                                        </td>
+                                        <th>Codigo</th>
+                                        <th>Descrição</th>
+                                        <th>Preço</th>
+                                        <th>Promoção</th>
+                                        <th>Data Cadastro</th>
+                                        <th>Atualizar</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-danger mt-3">Deletar</button>
+                                        </th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Codigo</th>
+                                        <th>Descrição</th>
+                                        <th>Preço</th>
+                                        <th>Promoção</th>
+                                        <th>Data Cadastro</th>
+                                        <th>Atualizar</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-danger mt-3">Deletar</button>
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach ($mercador_views as $mercador_view)
+                                        <tr>
+                                            <td>{{ $mercador_view->prod_cod }}</td>
+                                            <td>{{ $mercador_view->prod_description }}</td>
+                                            <td>R${{ $mercador_view->valor }}</td>
+                                            <td>R${{ $mercador_view->PrecoOferta }}</td>
+                                            <td>{{ $mercador_view->created_at->format('d/m/Y H:i') }}</td>
+                                            <td>
+                                                <a href="{{ route('update') }}">
+                                                    <i class="fas fa-sync"></i> Atualizar
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" name="ids[]"
+                                                        value="{{ $mercador_view->id }}">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </form>
                 </div>
             </div>
