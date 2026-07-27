@@ -60,8 +60,9 @@
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="tables">Produtos</a>
-                                <a class="nav-link" href="users">Usuarios</a>
+                                <a class="nav-link" href="publicity">Propaganda</a>
                                 <a class="nav-link" href="department">Departamentos</a>
+                                <a class="nav-link" href="users">Usuarios</a>                               
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"

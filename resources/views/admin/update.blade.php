@@ -64,7 +64,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mb-md-3 mt-4">
-                            <button type="submit" class="btn btn-primary w-25">Atualizar</button>
+                            <button type="submit" class="btn btn-primary w-40">Atualizar</button>
                         </div>
                     </form>
                 </div>

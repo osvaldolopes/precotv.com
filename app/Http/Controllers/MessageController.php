@@ -40,11 +40,11 @@ class MessageController extends Controller
     public function executarpython(): RedirectResponse
     {
         $process = new Process([
-            //'/mnt/e1daaebf-f475-4d80-a50d-28f7478d3641/PROJETOS/uptabela.com/venv/bin/python',
-            //'/mnt/e1daaebf-f475-4d80-a50d-28f7478d3641/PROJETOS/uptabela.com/main.py'
+            '/mnt/e1daaebf-f475-4d80-a50d-28f7478d3641/PROJETOS/uptabela.com/venv/bin/python',
+            '/mnt/e1daaebf-f475-4d80-a50d-28f7478d3641/PROJETOS/uptabela.com/main.py'
 
-            '/var/www/html/uptabela.com/venv/bin/python',
-            '/var/www/html/uptabela.com/main.py'
+            //'/var/www/html/uptabela.com/venv/bin/python',
+            //'/var/www/html/uptabela.com/main.py'
         ]);
         $process->run();
 
